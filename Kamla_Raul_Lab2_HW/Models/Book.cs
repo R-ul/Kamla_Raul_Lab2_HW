@@ -12,7 +12,8 @@ namespace Kamla_Raul_Lab2_HW.Models
         public int ID { get; set; }
         [Display(Name = "Book Title")]
         public string Title { get; set; }
-        public string Author { get; set; }
+        public int? AuthorID { get; set; }
+        public Author? Author { get; set; }//navigation property
 
         [Column("Price", TypeName = "decimal(6, 2)")]
         public decimal Price
